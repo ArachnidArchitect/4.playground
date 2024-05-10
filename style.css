@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p{
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    width: 600px;    
+    font-size: 5ch;
+    text-transform: uppercase;
+    background:url(https://matthew-dean-brown.github.io/hostedImages/images/cat2.avif);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card{
+    width: 300px;
+    height: 300px;
+
+}
+.front, .back{
+    height: 300px;
+    width: 300px;
+    box-shadow: 10px 10px 4px 2px rgb(152, 15, 220);
+    border-radius: 2rem;
+    position: absolute;
+    color: white;
+    backface-visibility: hidden;
+}
+.card{
+    transition: transform 1s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    object-fit: cover;
+
+}
+
+.container article:hover >.card{
+    transform:rotateY(180deg)  rotateZ(180deg);
+    cursor:pointer;
+    perspective: 1000px;
+   
+} 
+.back{
+    transform: rotatey(180deg) ;
+    background-color: black;
+}
